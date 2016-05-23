@@ -82,7 +82,10 @@ class Requirement(object):
         reported by commands like ``pip freeze``. Based on
         :attr:`pkg_resources.Requirement.project_name`.
         """
-        return self.setuptools_requirement.project_name
+        try:
+            return self.setuptools_requirement.project_name
+        except AttributeError:
+            return self.setuptools_requirement.name
 
     @cached_property
     def version(self):
