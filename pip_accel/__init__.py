@@ -79,7 +79,7 @@ from pip.exceptions import DistributionNotFound
 from pip.req import InstallRequirement
 
 # Semi-standard module versioning.
-__version__ = '0.43'
+__version__ = '0.43.1'
 
 # Initialize a logger for this module.
 logger = logging.getLogger(__name__)
